@@ -72,7 +72,7 @@
 
 ## Running multi container applications:
 - Docker compose is a tool build on top of docker engine. It is an incredible tool to work with multiple containers.
-- `docker image rm $(docker image ls -q)` removes all images in your machine. `docker image rm -f $(docker image ls -q)` removes all stopped containers in your machine. You can also use GUI tool Docker desktop for deleting the images and containers.
+- `docker image rm $(docker image ls -q)` removes all images in your machine. `docker image rm -f $(docker image ls -q)` removes all stopped containers in your machine. You can also use GUI tool Docker desktop for mac to purge and delete data.
 - JSON vs YAML : JSON is human readable language to represent data with key value pair representation. Array is defined using square brackets. Extension for Json file is `.json`. YAML is another language representing data and is less cluttered than JSON. Extension can be `.yaml` or `.yml`. Yaml does not require braces or comma and hyphen is used to represent array. Intendations are used to represent objects. Parsing YAML is slower than JSON.
 - `docker-compose build` builds all the images for all the apps listed in Docker Compose file.
 - `docker-compose up` runs all the images if the images is already build, if not it will build and run the images.
