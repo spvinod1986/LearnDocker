@@ -73,3 +73,19 @@
 ## Running multi container applications:
 - Docker compose is a tool build on top of docker engine. It is an incredible tool to work with multiple containers.
 - `docker image rm $(docker image ls -q)` removes all images in your machine. `docker image rm -f $(docker image ls -q)` removes all stopped containers in your machine. You can also use GUI tool Docker desktop for mac to purge and delete data.
+- JSON vs YAML : JSON is human readable language to represent data with key value pair representation. Array is defined using square brackets. Extension for Json file is `.json`. YAML is another language representing data and is less cluttered than JSON. Extension can be `.yaml` or `.yml`. Yaml does not require braces or comma and hyphen is used to represent array. Intendations are used to represent objects. Parsing YAML is slower than JSON.
+- `docker-compose build` builds all the images for all the apps listed in Docker Compose file.
+- `docker-compose up` runs all the images if the images is already build, if not it will build and run the images.
+- `docker-compose up -d` to run the images in detached mode.
+- `docker-compose ps` lists all the containers relevant to the application.
+- `docker-compose down` will stop and remove the containers but the images will still exist.
+- Every docker installation will have 3 networks: host, bridge and none. `docker network ls` shows list of network created in your machine.
+- Docker comes with embedded DNS server and each container contains DNS resolver. Each container has ip address and is part of a network.
+- `docker-compose logs` list logs of all containers in an application in one place.
+- In Dev environment, changes in dev can be published by mapping volumes from container app directory to the local source repo in the docker-compose file.
+- You can run db migration before starting a container, run tests etc by using `command` in docker-compose.
+
+## Deploying Applications:
+- Deployment has 2 options: Single host and Cluster deployment. Single host is easy as there is only one server but less availability. Cluster includes deploying to group of servers.
+- Docker has its own orchestrator solution called docker swarm.
+- Docker machine is used and it has drivers for different clud platforms.
